@@ -4,8 +4,10 @@
  * @link https://github.com/ammarfaizi2/prgc2
  */
 $f = implode(",", array_filter(get_defined_functions()["internal"], function ($f) {
-	return ! in_array($f, ["show_source", "get_class", "json_encode", "header", "is_numeric", "preg_match"]);
+	return ! in_array($f, ["show_source", "get_class", "json_encode", "header", "is_numeric", "preg_match", "file_get_contents", "substr", "str_repeat", "array_filter", "implode", "rand", "define", "ini_set"]);
 }));
+$f = implode(",", get_declared_classes());
+echo $f;die;
 
 define("FX", rand(0, 1024));
 define("FY", rand(1025, 2048));
