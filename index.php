@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @author Ammar Faizi <ammarfaizi2@gmail.com>
+ * @link https://github.com/ammarfaizi2/prgc2
+ */
 $f = implode(",", array_filter(get_defined_functions()["internal"], function ($f) {
 	return ! in_array($f, ["show_source", "get_class", "json_encode", "header", "is_numeric", "preg_match"]);
 }));
